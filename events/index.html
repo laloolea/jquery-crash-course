@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Crash Course | Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>JQuery Crash Course Events</h1>
+    </header>
+    <div id="container">
+        <h3>Mouse Events</h3>
+        <button id="btn1" class="button1">Button 1</button>
+        <button id="btn2">button 2</button>
+        <p class="para1">jQuery is built on top of JavaScript, a rich and expressive language in its own right. This section covers the basic concepts of JavaScript, as well as some frequent pitfalls for people who have not used JavaScript before. While it will be of particular value to people with no programming experience</p>
+        <h1 id="coords"></h1>
+        <hr>
+        <form id="form">
+			<label>Name</label><br>
+			<input type="text" id="name" name="name">
+			<br>
+			<label>Email</label><br>
+			<input type="text" id="email" name="email">
+			<br>
+			<label>Gender</label><br>
+			<select id="gender" name="gender">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            //I like better this one
+            // $('#btn1').click(e=>{
+            //     alert("button clicked");
+            // });    
+            // // $('#btn1').click(function(){
+            // //     alert("button clicked");
+            // // }); 
+            // $("#btn2").on('click',e=>{
+            //     alert("Click dos picado")
+            // });
+            // $("#btn1").on('click',e=>{
+            //     //$(".para1").hide()
+            //     $(".para1").toggle();
+            // });
+            // $("#btn1").dblclick(function(){
+            //     $('.para1').toggle();
+            // });
+            // $("#btn1").hover(function(){
+            //     $('.para1').toggle();
+            // });
+            // .hover put together the mouse enter and mouseleave in a single event which is the same to the function on below
+            // $("#btn1").on('mouseenter mouseleave',function(){
+            //     $('.para1').toggle();
+            // })
+
+            // $("#btn1").on('mousemove',function(){
+            //     $('.para1').toggle();
+            // })
+            // $("#btn1").on('mousedown mouseup',function(){
+            //     $('.para1').toggle();
+            // })
+
+            // $('#btn1').click(e=>{
+            //     console.log(e)
+            //     // alert(e.currentTarget.innerHTML);
+            //     // alert(e.currentTarget.innerHTML);
+            //     // alert(e.currentTarget.outerHTML);
+            //     // alert(e.currentTarget.className);
+                
+            // });  
+            // $("#btn1").on('mousemove',e=>{
+            //     $("#coords").html(`Coords en base a la pagina: Y: ${e.clientY} X: ${e.clientX}`)
+            //     $("#coords").html(`Coords en base al boton: Y: ${e.offsetY} X: ${e.offsetX}`)
+            // })
+            // $('input').focus(function(){
+            //   $(this).css('background','pink')
+            // });
+            // $('input').blur(function(){
+            //   $(this).css('background','white')
+            // });
+
+            // $('input').keyup(function(e){
+            //     console.log(e.target.value)
+            // });
+
+            // $('select#gender').change(e=>{
+            //     console.log(e.target.value);
+            // });
+
+            // $('#form').submit(e=>{
+            //     e.preventDefault();
+            //     let name = $('input#name').val();
+            //     console.log(name);
+            // })
+        
+        });
+          
+        
+    </script>
+</body>
+</html>
