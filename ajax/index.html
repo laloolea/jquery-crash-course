@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Crash Course | Ajax</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>JQuery Crash Course | Ajax</h1>
+    </header>
+    <div id="container">
+        <div id="result"></div>
+        <ul id="users"></ul>
+        <form id="postForm" action = "https://jsonplaceholder.typicode.com/posts" >
+            <input type="text" id="title" placeholder="title..">
+            <br>
+            <textarea id="body" placeholder="Body.." ></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            //Get data from another html into yours
+        //    $("#result").load('test.html',function(resppnseTxt,statusTxt,xhr){
+        //        if(statusTxt == 'success'){
+        //            alert("It went fine");
+        //        }else if(statusTxt=='error'){
+        //             alert("Error: "+xhr.statusText)
+        //        }
+        //    });
+            // Different way to get data from another html into yours
+            // $.get('test.html',function(data){
+            //     $('#result').html(data);
+            // });
+            //Get data from a Json file
+            // $.getJSON('users.json',function(data){
+            //     $.each(data,function(i,user){
+            //         $('ul#users').append(`<li>${user.firstName}</li>`)
+            //     });
+            // })
+            //Get data using ajax from a website with a json 
+            // $.ajax({
+            //     method:'GET',
+            //     url:'https://jsonplaceholder.typicode.com/posts',
+            //     dataType:'json'
+            // }).done(function(data){
+            //     console.log(data);
+            //     $.map(data,function(post){
+            //         $('#result').append(`<h3>${post.title}</h3><p>${post.body}</p>`);
+            //     });
+            // });
+            $('#postForm').submit(e=>{
+                e.preventDefault();
+
+                let title = $('#title').val();
+                let body = $('#body').val();
+                let url = $(this).attr('action');
+                $.post(url,{title:title,body:body}).
+                    done(data =>{
+                        console.log('Post Saved');
+                        console.log(data);
+                })
+            })
+        });
+        
+    </script>
+</body>
+</html>
