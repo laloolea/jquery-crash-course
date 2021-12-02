@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percipio Course | Event handling</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #target{
+            padding:10px;
+            border: 1px solid;
+        }
+        .toggle{
+            background-color:#aaa;
+        }
+        .box{
+            padding:10px;
+            border: 1px solid
+        }
+        .light{
+            display:block;
+            width: 100px;
+            height:100px;
+            border: 1px solid;
+
+        }
+        .red{
+            background: red;
+        }
+        .green{
+            background:green;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="target">This is the target
+        <label >Input</label>
+        <br>
+        <input type="text" />
+        <div class="inner">
+
+        </div>
+    </div> -->
+    <div class="box">
+        <!-- <button class="button1">Button 1</button>
+        <div class="light">
+
+        </div>
+        <button class="button2">Button 2</button>
+        <div class="light">
+
+        </div> -->
+        <!-- <label for="month">Month</label>
+        <select name="months" class="js-select">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+        </select>
+        <div class="trigger">
+            <button>Trigger Change</button>
+        </div> -->
+
+        <!-- <label for="firstName">First Name</label>
+        <input type="text" name="firstName" class="name"/>
+        <div class="light">
+
+        </div>
+        <button>Trigger Focus</button> -->
+        
+    </div>
+    <script>      
+        $(document).ready(function(){
+            // $("#target").on('dblclick',function(){
+            //     $(this).toggleClass('toggle');
+            // });
+            // $("#target").on('mouseenter mouseleave',function(){
+            //     $(this).toggleClass('toggle');
+            // });
+            // $("#target input").keypress(function(event){
+            //     $("#target .inner").append($("#target input").val() + 
+            //     '<br/>')
+            // })
+
+            // $(".button1").one("click",function(event){
+            //     $(this).next('div.light').toggleClass("red");
+            //     console.log(event.type);
+            // })
+            // $(".button2").on("click",function(){
+            //     $(this).next('div.light').toggleClass("green");
+            //     $(".button1").trigger('click');
+            // })
+            // $('.js-select').change(function(e){
+            //     console.log("Month was changed to");
+            // })
+            // $(".trigger button").click(function(){
+            //     $(".js-select").trigger('change');
+            // })
+            
+            // $(".name").focus(function(){
+            //     $(this).next('div').toggleClass("green");
+            // });
+
+            // $('.name').blur(function(){
+            //     $(this).next('div').toggleClass('red');
+            // });
+
+            // $("button").click(function(){
+            //     $('.name').trigger('focus');
+            // })
+            $(window).resize(function(){
+                $('.box').append('<p>Resize event called </p>');
+
+            });
+        });
+    </script>
+</body>
+</html>

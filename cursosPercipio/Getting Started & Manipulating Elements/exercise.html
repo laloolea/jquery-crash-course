@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <table>
+    <tr><th>First</th><th>Last</th></tr>
+    <tr><td>John</td><td>Smith</td></tr>
+    <tr><td>Jean</td><td>Doe</td></tr>
+    </table>
+    </body>
+
+    <script>
+    alert( $("td").first().next().text() );
+    </script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Manipulate Elements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <button id="click-me-button">Click Me</button>
+    <table border="1"  cellpadding="10">
+        <tr id="table-header-row"><th>First Name</th><th>Last name</th></tr>
+        <tr id="row-1"><td>John</td><td>Smith</td></tr>
+    </table>
+    <!-- <div id="my-div">
+        <input type="text" id="my-input" placeholder="Enter your name" value="My input value">
+    </div>
+
+    <button id="button-1">Button 1</button>
+    <button id="button-2" class="button">Button 2</button> 
+    <table border="1" cell-padding="10">
+        <tr><td>Text Update</td><td>Value update</td><td>Html Update</td></tr>
+        <tr>
+            <td id="text-update"></td>
+            <td><input type="text" id="update-field" placeholder="Enter your first name"></td>
+            <td id="htmlupdate"></td>
+        </tr>
+    </table>
+    -->
+    <script>
+        // var $q =jQuery.noConfli ct();
+        // $q(document).ready(function(){
+        //     $q("#click-me-button").click(function(){
+        //         $q('#my-div').css("width","300" ).css("height",'300');
+        //     })
+
+
+        // })
+        $(document).ready(function(){ 
+            // $("#button-1").click(function(){
+            //     alert("ID selector"); 
+            // });
+
+            // $(".button").click(function(){
+            //     alert("class selector");
+            // });
+
+            // $("#my-div").on("div:toggle",function(event){
+            //     $("#my-div").css("color","red");
+            //     $("#my-div").animate({left: '250px'});
+
+            // });
+            // $("#click-me-button").click(function(){
+            //     $("#my-div").trigger("div:toggle");
+            // })
+            $("#click-me-button").click(function(){
+                // $("#text-update").text("Welcome");
+                // $("#update-field").val("test");
+                // $("#htmlupdate").htffml("<input type='text' placeholder='Enter your last name'>");
+                // alert($("#my-div").css("width"));
+                // $("#my-div").css({"color":"red","background-color":"#f4f4f4"});
+                // $("#remove-div").remove();
+                // $("#empty-div").empty();
+                alert($("td").first().text());
+                alert($("td").last().next().text());
+
+            })
+        });
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percipio Course | Element Manipulation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #target{
+            padding:10px;
+            border: 1px solid;
+        }
+        .toggle{
+            background-color:#aaa;
+        }
+        .box{
+            padding:10px;
+            border: 1px solid
+        }
+        .light{
+            display:block;
+            width: 100px;
+            height:100px;
+            border: 1px solid;
+
+        }
+        .red{
+           
+            border:2px solid red;
+        }
+        .green{
+            background:green;
+        }
+        .element{
+            width: 550px;
+            height:150px;
+            background:gray;
+            margin:25px;
+            padding:25px;
+            border: 25px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <button class="checkprop">Check value of attr() and prop</button>
+        <input type="checkbox" id="check" checked="checked">
+        <label for="check">Check me</label>
+        <div class="info">
+
+        </div>
+        <button class="setprop">Set prop('checked')</button> -->
+        <!-- <div class="element">
+
+        </div> -->
+        <p class="first">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. 
+        </p>
+
+        <p class="second">
+            Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+        </p>
+        <button class="add-class">addClass()</button>
+        <button class="remove-class">removeClass()</button>
+        <button class="replace-all">replaceAll()</button>
+        <button class="replace-with">replaceWith()</button>
+        <button class="replace-with2">replaceWith() 2</button>
+        <button class="button1">appendTo()</button>
+        <button class="button2">clone()</button>
+
+        <button class="wrap">wrap()</button>
+        <button class="wrapCallback">wrap() callback</button>
+        <button class="unwrap">unwrap()</button>
+        <button class="hide">hide()</button>
+        <button class="hidefunction">hide() with function</button>
+    </div>
+
+    <script>
+        $(function(){
+            var box = $('.box');
+            $('.add-class').click(function(){
+                $('.box').addClass("red");
+            });
+            $('.remove-class').click(function(){
+                $('.box').removeClass("red");
+            });
+            $('.replace-all').click(function(){
+                $('<h2>Heading 2 here</h2>').replaceAll('.box p');
+            });
+            $('.replace-with').click(function(){
+                $(".box p.first").replaceWith('<h3>Heading 3 here</h3>');
+            });
+            $('.replace-with2').click(function(){
+                $(".box p.first").replaceWith($('.box p.second'));
+            });
+            $('.button1').click(function(){
+                $('.first').appendTo($('.second'));
+            })
+            $('.button2').click(function(){
+                $('.first').clone(true).appendTo($('.second'));
+            })
+            $('.wrap').click(function(){
+                $('.box').wrap('<div class="red"></div>')
+            })
+            $('.wrapCallback').click(function(){
+                $('.box').wrap(function(){
+                    return '<div class="red">'+$(this).text()+'</div>';
+                })
+            })
+            $('.unwrap').click(function(){
+                $('.box').unwrap();
+            })
+
+            $('.hide').click(function(){
+                $('.first').hide(1000);
+            });
+            $('.hidefunction').click(function(){
+                $(".first").hide(1000,function(){
+                    console.log('Animation completed');
+                });
+            });
+            // $(".checkprop").click(function(){
+            //     $(".info").html("attr('checked'):" + $('input').attr('checked')+ "<br/>prop('checked'):" + $('input').prop('checked'));
+            // });
+            // $(".setprop").click(function(){
+            //     $('#check').prop("checked",true);
+            // });
+        });
+    </script>
+
+</body>
+</html>

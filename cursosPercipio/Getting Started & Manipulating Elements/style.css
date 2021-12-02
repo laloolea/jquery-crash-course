@@ -1,0 +1,6 @@
+#empty-div,
+#remove-div {
+  height: 300px;
+  width: 300px;
+  border: 10px black solid;
+}
